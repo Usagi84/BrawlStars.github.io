@@ -12,33 +12,31 @@ html, body {
 }
     
 .btn-jouer {
-  position: fixed;
-  bottom: 5px;           /* marge en bas */
-  right: 5px;            /* marge à droite */
+  position: fixed;       /* reste collé à l’écran */
+  bottom: 5px;           /* marge en bas de la fenêtre */
+  right: 5px;            /* marge à droite de la fenêtre */
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
-  position: relative; /* référence pour positionner le texte par rapport à l’image */
 }
 
 .btn-jouer img {
   display: block;
-  width: 220px;      /* taille du bouton image */
+  width: 200px; /* adapte à ta taille d’image */
   height: auto;
 }
 
 .btn-jouer .texte {
   position: absolute;
-  text-align: center;
-  bottom: 2px;                 /* légèrement au-dessus du bord inférieur de l’image */
-  left: 50%;                   /* centre horizontalement par rapport à l’image */
-  transform: translateX(-50%); /* ajuste pour un centrage parfait */
+  bottom: 2px;           /* collé en bas de l’image avec 2px de marge */
+  left: 50%;             /* centre horizontalement */
+  transform: translateX(-50%); /* corrige pour être pile au milieu */
   font-family: 'Lilita One', cursive;
-  font-size: 32px;             /* texte bien visible */
+  font-size: 24px;
   color: white;
-  -webkit-text-stroke: 2px black; /* contour noir net */
-  pointer-events: none;        /* clics passent sur le bouton */
+  -webkit-text-stroke: 2px black; /* contour noir de 2px */
+  pointer-events: none;  /* clics passent sur le bouton */
 }
     
 </style>
@@ -55,6 +53,7 @@ html, body {
 </body>
 
 </html>
+
 
 
 
