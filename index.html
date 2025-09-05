@@ -31,10 +31,6 @@ text-shadow:
 0 3px 0 #000;
 }
 
-.hidden {
-  display: none !important;
-}
-
 </style>
 <body>
   <button onclick="window.location.href='game.html'" class="btn-jouer">JOUER</button>
@@ -44,48 +40,5 @@ text-shadow:
   <button onclick="window.location.href='parametre.html'" class="btn-parametre">PARA</button>
   <button onclick="window.location.href='club.html'" class="btn-club">CLUB</button>
 </body>
-<script>
-function checkOrientation() {
-  const warningId = 'orientationWarning';
-  let warning = document.getElementById(warningId);
-
-  if (window.innerHeight < window.innerWidth) {
-    // Paysage → créer le message si pas déjà présent
-    if (!warning) {
-      warning = document.createElement('div');
-      warning.id = warningId;
-      warning.style.position = 'fixed';
-      warning.style.top = '0';
-      warning.style.left = '0';
-      warning.style.width = '100vw';
-      warning.style.height = '100vh';
-      warning.style.background = 'rgba(0,0,0,0.9)';
-      warning.style.color = 'white';
-      warning.style.display = 'flex';
-      warning.style.justifyContent = 'center';
-      warning.style.alignItems = 'center';
-      warning.style.fontSize = '24px';
-      warning.style.textAlign = 'center';
-      warning.style.zIndex = '9999';
-      warning.textContent = "🔄 Veuillez tourner votre appareil pour utiliser le site en portrait";
-      document.body.appendChild(warning);
-    }
-    // Masquer le contenu réel
-    document.querySelector('.contenu')?.classList.add('hidden');
-    document.querySelector('.footer')?.classList.add('hidden');
-  } else {
-    // Portrait → retirer le message
-    warning?.remove();
-    document.querySelector('.contenu')?.classList.remove('hidden');
-    document.querySelector('.footer')?.classList.remove('hidden');
-  }
-}
-
-// Vérifie au chargement
-window.addEventListener('load', checkOrientation);
-
-// Vérifie à chaque rotation ou redimensionnement
-window.addEventListener('resize', checkOrientation);
-</script>
 
 </html>
