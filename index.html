@@ -10,36 +10,35 @@
 html, body {
   overflow-x: hidden; /* empêche le scroll horizontal */
 }
-
+    
 .btn-jouer {
-  position: fixed;       /* le bouton reste en bas à droite */
-  bottom: 5px;
-  right: 5px;
+  position: fixed;   /* bouton fixé à l’écran */
+  bottom: 5px;       /* marge en bas */
+  right: 5px;        /* marge à droite */
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
-  position: relative;    /* permet au texte de se placer par rapport à l’image */
+  position: relative; /* référence pour positionner le texte par rapport à l’image */
 }
 
 .btn-jouer img {
   display: block;
-  width: 220px; /* tu peux augmenter pour agrandir le bouton */
+  width: 220px;      /* taille du bouton image */
   height: auto;
 }
 
 .btn-jouer .texte {
   position: absolute;
-  bottom: 2px;                  /* colle en bas de l’image */
-  left: 50%;                    /* centre horizontalement */
-  transform: translateX(-50%);  /* recentre pile au milieu */
+  bottom: 2px;                 /* légèrement au-dessus du bord inférieur de l’image */
+  left: 50%;                   /* centre horizontalement par rapport à l’image */
+  transform: translateX(-50%); /* ajuste pour un centrage parfait */
   font-family: 'Lilita One', cursive;
-  font-size: 32px;              /* taille du texte (agrandi) */
+  font-size: 32px;             /* texte bien visible */
   color: white;
   -webkit-text-stroke: 2px black; /* contour noir net */
-  pointer-events: none;         /* clics passent sur le bouton */
+  pointer-events: none;        /* clics passent sur le bouton */
 }
-    
     
 </style>
 <body>
@@ -55,6 +54,7 @@ html, body {
 </body>
 
 </html>
+
 
 
 
