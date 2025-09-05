@@ -11,8 +11,10 @@ html, body {
   overflow-x: hidden; /* empêche le scroll horizontal */
 }
 
-    .btn-jouer {
-  position: relative;
+.btn-jouer {
+  position: fixed;       /* reste collé à l’écran */
+  bottom: 5px;           /* marge en bas */
+  right: 5px;            /* marge à droite */
   border: none;
   padding: 0;
   background: none;
@@ -21,27 +23,26 @@ html, body {
 
 .btn-jouer img {
   display: block;
-  width: 200px; /* adapte la taille */
+  width: 200px; /* adapte la taille de ton image */
   height: auto;
 }
 
 .btn-jouer .texte {
   position: absolute;
-  top: 50%;         /* centrer verticalement */
-  left: 50%;        /* centrer horizontalement */
-  transform: translate(-50%, -50%);
-  color: white;     /* couleur du texte */
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* lisible sur image */
-  pointer-events: none; /* clics passent à travers */
+  bottom: 10px;      /* un peu au-dessus du bord bas de l’image */
+  right: 10px;       /* un peu à gauche du bord droit de l’image */
+  font-family: 'Lilita One', cursive;
+  font-size: 22px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* pour rendre lisible */
+  pointer-events: none; /* pour ne pas bloquer le clic */
 }
     
 </style>
 <body>
   <button onclick="window.location.href='game.html'" class="btn-jouer">
-  <img src="https://cdn.discordapp.com/attachments/712210445301186580/1346930935353839659/493_Sem_Titulo_20250305164033.png?ex=68bbe5ef&is=68ba946f&hm=81673e95eae3e8adc42ff918993528291476a7cc1798f25b0e30991396fc799c&" alt="Jouer">
-  <span class="textejouer">JOUER</span>
+  <img src="https://cdn.discordapp.com/attachments/1408908918897250398/1413598175020712007/IMG_20250905_205304.png?ex=68bc8364&is=68bb31e4&hm=8a6c3fe2cef2407de37b773f5161c86339e76b458a8cb539f28a25f5a08391bb&" alt="Jouer">
+  <span class="texte">JOUER</span>
   </button>
   <button onclick="window.location.href='shop.html'" class="btn-shop">🛒</button>
   <button onclick="window.location.href='brawlers.html'" class="btn-brawlers">🧔</button>
@@ -51,6 +52,7 @@ html, body {
 </body>
 
 </html>
+
 
 
 
