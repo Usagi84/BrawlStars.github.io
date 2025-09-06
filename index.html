@@ -30,10 +30,21 @@
             height: auto;
         }
 
+        .btn-quetes {
+            position: fixed;       /* reste collé à l’écran */
+            bottom: 0px;           /* marge en bas */
+            left: 5px;            /* marge à gauche */
+        }
+
         .brawler-shelly {
             position: fixed;       /* reste collé à l’écran */
-            bottom: 50px;           /* marge en bas */
-            right: 26px;            /* marge à droite */
+            bottom: 90px;           /* marge en bas */
+            right: -50px;            /* marge à droite */
+        }
+
+        .btn-quetes img {
+            width: 128px;   /* largeur réduite */
+            height: auto;  /* conserve les proportions */
         }
 
     </style>
@@ -41,8 +52,9 @@
 <body>
 
 <div>
-  <div class="brawler-shelly"></div>
+  <div class="brawler-shelly">
   <img src="./shelly.gif" alt="Shelly">
+</div>
 </div>
 
 <button onclick="window.location.href='game.html'" class="btn-jouer">
@@ -51,11 +63,11 @@
   </div>
 </button>
 
-    <button onclick="window.location.href='shop.html'" class="btn-shop">🛒</button>
-    <button onclick="window.location.href='brawlers.html'" class="btn-brawlers">🧔</button>
-    <button onclick="window.location.href='survivant.html'" class="btn-survivant">SURVIVANT SOLO</button>
-    <button onclick="window.location.href='parametre.html'" class="btn-parametre">PARA</button>
-    <button onclick="window.location.href='club.html'" class="btn-club">CLUB</button>
+<div class="btn-quetes">
+  <div class="container">
+   <img src="./btn-quetes.jpg" alt="Quetes">
+  </div>
+</div>
 
 </body>
 </html>
