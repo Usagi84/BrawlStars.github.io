@@ -30,15 +30,26 @@
             height: auto;
         }
 
+        .brawler-shelly {
+            position: fixed;       /* reste collé à l’écran */
+            bottom: 50px;           /* marge en bas */
+            right: 26px;            /* marge à droite */
+        }
+
     </style>
 </head>
 <body>
 
-    <button onclick="window.location.href='game.html'" class="btn-jouer">
-        <div class="container">
-            <img src="./btn-jouer.png" alt="Jouer">
-        </div>
-    </button>
+<div>
+  <div class="brawler-shelly"></div>
+  <img src="./shelly.gif" alt="Shelly">
+</div>
+
+<button onclick="window.location.href='game.html'" class="btn-jouer">
+  <div class="container">
+   <img src="./btn-jouer.png" alt="Jouer">
+  </div>
+</button>
 
     <button onclick="window.location.href='shop.html'" class="btn-shop">🛒</button>
     <button onclick="window.location.href='brawlers.html'" class="btn-brawlers">🧔</button>
@@ -48,8 +59,3 @@
 
 </body>
 </html>
-
-
-
-
-
