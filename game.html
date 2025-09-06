@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars Mini-Jeu</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            background-image: url('./bg-game.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            touch-action: none;
+        }
+
+        .shelly {
+            position: absolute;
+            bottom: 15px;
+            left: 0;      /* position initiale à gauche */
+            width: 108px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<img src="./shelly.png" alt="Shelly" class="shelly" id="shelly">
+
+<script>
+const shelly = document.getElementById('shelly');
+let shellyLeft = 0;
+
+// Met à jour la position du personnage
+function moveShelly(x) {
+    const minX = 0;
+    const maxX = window.innerWidth - shelly.offsetWidth;
+    shellyLeft = Math.min(Math.max(x - shelly.offsetWidth / 2, minX), maxX);
+    shelly.style.left = shellyLeft + 'px';
+}
+
+// Tactile
+window.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    moveShelly(e.touches[0].clientX);
+}, { passive: false });
+
+// Souris (pour tester sur PC)
+window.addEventListener('mousemove', (e) => {
+    moveShelly(e.clientX);
+});
+</script>
+
+</body>
+</html>
