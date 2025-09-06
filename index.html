@@ -8,9 +8,19 @@
     <style>
         html, body {
             overflow-x: hidden; /* empêche le scroll horizontal */
+            background-image: url("./bg.png");
+            background-repeat: no-repeat; /* empêche la répétition */
+            background-position: center;  /* centre l'image */
+            background-size: cover;       /* optionnel : fait en sorte que l'image couvre tout le fond */
             margin: 0;
             padding: 0;
             height: 100%;
+        }
+
+        .brawler-shelly {
+            position: fixed;       /* reste collé à l’écran */
+            bottom: 90px;           /* marge en bas */
+            right: -50px;            /* marge à droite */
         }
 
         /* Bouton Jouer */
@@ -36,17 +46,54 @@
             left: 5px;            /* marge à gauche */
         }
 
-        .brawler-shelly {
-            position: fixed;       /* reste collé à l’écran */
-            bottom: 90px;           /* marge en bas */
-            right: -50px;            /* marge à droite */
-        }
-
         .btn-quetes img {
             width: 128px;   /* largeur réduite */
             height: auto;  /* conserve les proportions */
         }
 
+                .btn-parametre {
+            position: fixed;       /* reste collé à l’écran */
+            top: 5px;           /* marge en haut */
+            right: 5px;            /* marge à droite */
+        }
+
+        .btn-parametre img {
+            width: 128px;   /* largeur réduite */
+            height: auto;  /* conserve les proportions */
+        }
+
+         .btn-brawlers {
+            position: fixed;       /* reste collé à l’écran */
+            bottom: 220px;           /* marge en bas */
+            left: 5px;            /* marge à gauche */
+        }
+
+        .btn-brawlers img {
+            width: 128px;   /* largeur réduite */
+            height: auto;  /* conserve les proportions */
+        }
+
+        .btn-magasin {
+            position: fixed;       /* reste collé à l’écran */
+            bottom: 305px;           /* marge en bas */
+            left: 5px;            /* marge à gauche */
+        }
+
+        .btn-magasin img {
+            width: 128px;   /* largeur réduite */
+            height: auto;  /* conserve les proportions */
+        }
+
+        .btn-profil {
+            position: fixed;       /* reste collé à l’écran */
+            top: 5px;           /* marge en bas */
+            left: 5px;            /* marge à gauche */
+        }
+
+        .btn-profil img {
+            width: 128px;   /* largeur réduite */
+            height: auto;  /* conserve les proportions */
+        }
     </style>
 </head>
 <body>
@@ -66,6 +113,30 @@
 <div class="btn-quetes">
   <div class="container">
    <img src="./btn-quetes.jpg" alt="Quetes">
+  </div>
+</div>
+
+<div class="btn-parametre">
+  <div class="container">
+   <img src="./btn-parametre.jpg" alt="Parametre">
+  </div>
+</div>
+
+<div class="btn-magasin">
+  <div class="container">
+   <img src="./btn-magasin.jpg" alt="Magasin">
+  </div>
+</div>
+
+<div class="btn-brawlers">
+  <div class="container">
+   <img src="./btn-brawlers.jpg" alt="Brawlers">
+  </div>
+</div>
+
+<div class="btn-profil">
+  <div class="container">
+   <img src="./btn_profil.jpg" alt="Profil">
   </div>
 </div>
 
